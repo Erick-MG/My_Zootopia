@@ -14,11 +14,13 @@ def user_input_animal(animal_data):
 
     output = ''
     for animal_dict in animal_data:
-        output += f"Name: {animal_dict["name"]}\n"
-        output += f"Diet: {animal_dict["characteristics"]["diet"]}\n"
+        output += '<li class="cards__item">'
+        output += f"Name: {animal_dict["name"]}<br/>\n"
+        output += f"Diet: {animal_dict["characteristics"]["diet"]}<br/>\n"
         output += f"Location: {animal_dict["locations"][0]}\n"
         if "type" in animal_dict["characteristics"]:
             output += f"Type: {animal_dict["characteristics"]["type"]}\n"
+        output += '</li>'
     return output
 
 def write_html(replace_html):
